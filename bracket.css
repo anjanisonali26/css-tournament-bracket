@@ -1,5 +1,190 @@
 /*
 Author: Saint Aye Chan Htoon
 Author URI: http://www.saintayechanhtoon.me
-Description: The CSS bracket is 
+Description: This is the CSS file for tournament 16 team brackets
 */
+
+#bracket{
+  margin:50px auto 0px auto;
+  position: relative;
+}
+
+#bracket .champ img{
+  position: absolute;
+  margin: 0 auto;
+}
+
+div[class="side-left"]{
+  width: 40%;
+  float: left;
+  padding-top: 50%;
+  margin: 0 5%;
+  position: relative;
+  z-index: 1;
+  background: url('img/bracket-left.png') no-repeat;
+  background-size: 100%;
+}
+
+div[class="side-right"]{
+  width: 40%;
+  float: left;
+  padding-top: 50%;
+  margin: 0 5%;
+  position: relative;
+  z-index: 1;
+  background: url('img/bracket-right.png') no-repeat;
+  background-size: 100%;
+}
+
+.side-left-8{
+  width: 40%;
+  float: left;
+  padding-top: 50%;
+  margin: 0 30%;
+  position: relative;
+  z-index: 1;
+  background: url('img/bracket-left-8.png') no-repeat;
+  background-size: 100%;
+}
+
+.r1-1{ top: -5%; }
+.r1-2{ top: 10%; }
+.r1-3{ top: 20%; }
+.r1-4{ top: 30%; }
+.r1-5{ top: 50%; }
+.r1-6{ top: 60%; }
+.r1-7{ top: 80%; }
+.r1-8{ top: 90%; }
+
+
+ul li[class^="r1-"],
+ul li[class^="r2-"],
+ul li[class^="r3-"],
+ul li[class^="r4-"]{
+  position: absolute;
+  z-index: 3;
+}
+
+ul li[class^="r1-"] a,
+ul li[class^="r2-"] a,
+ul li[class^="r3-"] a,
+ul li[class^="r4-"] a{
+  display: block;
+  position: absolute;
+}
+
+ul li[class^="r1-"] a span
+ul li[class^="r2-"] a span,
+ul li[class^="r3-"] a span,
+ul li[class^="r4-"] a span{
+ 
+}
+
+ul li[class^="r1-"] a img,
+ul li[class^="r2-"] a img,
+ul li[class^="r3-"] a img,
+ul li[class^="r4-"] a img{
+  max-width: 100%;
+	height: auto;
+	width: auto; 
+}
+
+/*============================== Round Two(First Round)*/
+
+ul[class="roundone"]{
+  position: absolute;
+  z-index: 2;
+  padding-top: 115%;
+  list-style: none;
+}
+
+ul[id="r1-west"]{
+  left: -5%;
+  top:0;
+}
+
+ul[id="r1-east"]{
+  left: 93%;
+  top:0;
+}
+
+.r1-1{ top: -5.5%; }
+.r1-2{ top: 9.5%; }
+.r1-3{ top: 23.5%; }
+.r1-4{ top: 38%; }
+.r1-5{ top: 52%; }
+.r1-6{ top: 66%; }
+.r1-7{ top: 80.5%; }
+.r1-8{ top: 94.5%; }
+
+/*============================== Round Two(Quarter Fianl)*/
+ul[class="roundtwo"]{
+  position: absolute;
+  top:0;
+  z-index: 2;
+  padding-top: 115%;
+  list-style: none;
+}
+
+ul[id="r2-west"]{
+  left: 52%;
+  top:0;
+}
+
+ul[id="r2-east"]{
+  left: 36%;
+  top:0;
+}
+
+.r2-1{ top: 2%; }
+.r2-2{ top: 30.5%; }
+.r2-3{ top: 59%;}
+.r2-4{ top: 88%;}
+
+/*============================== Round Three(Semi Final)*/
+
+ul[class="roundthree"]{
+  position: absolute;
+  top:0;
+  z-index: 2;
+  padding-top: 115%;
+  list-style: none;
+}
+
+ul[id="r3-west"]{
+  left: 81%;
+  top:0;
+}
+
+ul[id="r3-east"]{
+  left: 7%;
+  top:0;
+}
+
+.r3-1{ top: 16%; }
+.r3-2{ top: 73%; }
+
+/*============================== Round Four (Final)*/
+
+ul[class="roundfour"]{
+  position: absolute;
+  top:0;
+  z-index: 2;
+  padding-top: 115%;
+  list-style: none;
+}
+
+ul[id^="r4-west"]{
+  left: 92%;
+  top:0;
+}
+
+ul[id="r4-east"]{
+  left: -5%;
+  top:0;
+}
+
+#r4-west .r4-1{ top: 59%; }
+#r4-east .r4-1{ top: 31%; }
+#r4-west-8 .r4-1{ top: 40%; }
+
