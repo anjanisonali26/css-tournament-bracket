@@ -3,74 +3,119 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <title>CSS Tournament Bracket by saintach</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>CSS Tournament Bracket</h1>
-        <h2>16 Players Tournament Bracket</h2>
-        <a href="https://github.com/saintach/css-tournament-bracket" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
+        <header>
+          <h1>CSS Tournament Bracket</h1>
+          <h2>Simple 16 Players Tournament Bracket</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/saintach/css-tournament-bracket/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/saintach/css-tournament-bracket/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/saintach/css-tournament-bracket" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
 <p>Create the 8 players and 16 players tournament bracket. Image thumbnail of each player included. </p>
 
-<h3>
-<a name="how-to-use-css-tournament-brackets" class="anchor" href="#how-to-use-css-tournament-brackets"><span class="octicon octicon-link"></span></a>How to Use CSS Tournament Brackets</h3>
+<h2>
+<a name="how-to-use-css-tournament-brackets" class="anchor" href="#how-to-use-css-tournament-brackets"><span class="octicon octicon-link"></span></a>How to Use CSS Tournament Brackets</h2>
 
 <ol>
-<li>Include bracket.css on your side
-<code>&lt;link rel="stylesheet" href="bar-graph.css"&gt;</code>
+<li>
+<h3>
+<a name="include-bracketcss-on-your-side" class="anchor" href="#include-bracketcss-on-your-side"><span class="octicon octicon-link"></span></a>Include bracket.css on your side</h3>
+
+<pre><code>&lt;link rel="stylesheet" href="bracket.css"&gt;
+</code></pre>
 </li>
-</ol><h3>
+<li>
+<h3>
 <a name="add-markup-to-your-html" class="anchor" href="#add-markup-to-your-html"><span class="octicon octicon-link"></span></a>Add Markup to your HTML</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Add your images for the player at <code>your_image</code>. 
+For 8 player-tournament, you can center the bracket which is <code>class="side-..."</code>. 
+<code>r-1</code> stands for round one – <code>r-2</code> , <code>r-3</code> , <code>r-4</code> as well. </p>
 
-<h3>
-<a name="thats-it" class="anchor" href="#thats-it"><span class="octicon octicon-link"></span></a>That's it!</h3>
+<pre><code>&lt;div id="bracket"&gt;
+  &lt;div class="side-left-16"&gt;&lt;!--LEFT TOURNAMENT BRACKET--&gt;
+    &lt;ul class="roundone" id="r1-west"&gt;
+      &lt;li class="r1-1"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+      &lt;li class="r1-2"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+      ...
+      &lt;li class="r1-8"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;!--END of Round One--&gt;  
+    &lt;ul class="roundtwo" id="r2-west"&gt;
+      &lt;li class="r2-1"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+        ...
+      &lt;li class="r2-4"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;!--END of Round Two--&gt;
+    &lt;ul class="roundthree" id="r2-west"&gt;
+      &lt;li class="r3-1"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+      &lt;li class="r3-2"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;!--END of Round Three--&gt;  
+    &lt;ul class="roundfour" id="r2-west"&gt;
+      &lt;li class="r4-1"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+      &lt;li class="r4-2"&gt;
+        &lt;img src="your_image"&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;&lt;!--END of Round Four Final--&gt;
+  &lt;/div&gt;&lt;!--END of Left Tournament Bracket--&gt;
+  &lt;div class="side-right-16"&gt;&lt;!--RIGHT TOURNAMENT BRACKET--&gt;
+        ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</li>
+</ol><h2>
+<a name="thats-it" class="anchor" href="#thats-it"><span class="octicon octicon-link"></span></a>That's it!</h2>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Built by <a href="www.saintayechanhtoon.me">Saint Aye Chan Htoon</a>.</p>
 
-<p>Saint Aye Chan Htoon <a href="https://github.com/saintach" class="user-mention">@saintach</a></p>
+<hr><p>Feel free to use. Feedback <a href="https://github.com/saintach" class="user-mention">@saintach</a>.</p>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/saintach/css-tournament-bracket/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/saintach/css-tournament-bracket/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <footer>
+          CSS Tournament Bracket is maintained by <a href="https://github.com/saintach">saintach</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-          <p class="repo-owner"><a href="https://github.com/saintach/css-tournament-bracket"></a> is maintained by <a href="https://github.com/saintach">saintach</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+        
       </div>
     </div>
-
-  
   </body>
 </html>
